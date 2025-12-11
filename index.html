@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Khas Jawa Timur Lengkap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <img src="logosmatajaya.png" alt="Logo Sekolah" class="logo-placeholder">
+                
+                <h2>KULINER KHAS JAWA TIMUR</h2>
+                
+                <img src="jatim.jpg" alt="Logo Jawa Timur" class="logo-placeholder"> 
+            </div>
+
+            <div class="group-photo-container">
+                <img src="klompok.jpg" alt="Foto Kelompok" class="group-photo"> 
+            </div>
+            
+            <p class="greeting-text">
+                Selamat datang di Peta Kuliner Khas Jawa Timur. Website ini menyajikan informasi lengkap 
+                mengenai lebih dari 80 jenis kuliner khas dari 38 Kabupaten/Kota di Jawa Timur, mulai dari 
+                Surabaya hingga Banyuwangi. Gunakan fitur filter dan pencarian untuk menemukan hidangan favorit 
+                Anda dan jelajahi kekayaan rasa nusantara!
+            </p>
+            
+            <p class="team-name">
+                Dibuat oleh: BALADIKA DATA
+            </p>
+
+            <button onclick="closeModal()">Mulai Jelajahi</button>
+        </div>
+    </div>
+
+    <div id="mainContent" style="display: none;">
+        <header>
+            <div class="header-inner">
+                <img src="logosmatajaya.png" alt="Logo Sekolah" class="logo-placeholder-header">SMATAJAYA
+                
+                <h1>KULINER KHAS JAWA TIMUR</h1>
+                
+                <div class="team-name-header">BALADIKA DATA</div>
+            </div>
+        </header>
+        
+        <div class="controls">
+            <select id="cityFilter" onchange="filterFood()">
+                <option value="">Semua Daerah</option>
+            </select>
+            <input type="text" id="searchBar" oninput="filterFood()" placeholder="Cari nama makanan atau deskripsi...">
+        </div>
+        
+        <div id="foodContainer" class="food-grid">
+            </div>
+    </div>
+    <div id="foodDetailModal" class="modal" style="display: none;">
+    <div class="modal-content detail-content">
+        <span class="close-btn" onclick="closeFoodDetail()">&times;</span>
+        <div class="detail-image-wrapper">
+            <img id="detailImage" src="" alt="Detail Makanan" class="detail-img">
+        </div>
+        <div class="detail-text">
+            <span id="detailBadge" class="city-badge">Kota</span>
+            <h2 id="detailTitle">Nama Makanan</h2>
+            <p id="detailDesc">Deskripsi lengkap makanan akan muncul di sini.</p>
+            <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ddd;">
+            <p><strong>💡 Info Menarik:</strong> Kuliner ini sangat cocok dinikmati saat bersama keluarga atau dengan orang tercinta❤️.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            // Tambahkan ini agar AOS mendeteksi elemen yang dimuat oleh JS Anda
+            once: true // Animasi hanya terjadi satu kali saat pertama kali masuk viewport
+        });
+    </script>
+
+    <script src="script.js"></script>
+</script>
+
+</body>
+</html>
